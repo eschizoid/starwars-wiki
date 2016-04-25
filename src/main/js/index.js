@@ -2,7 +2,7 @@
 module.change_code = 1;
 var _ = require('lodash');
 var Alexa = require('alexa-app');
-var StarWarsDataHelper = require('./star_wars_data_helper');
+var StarWarsDataHelper = require('./../../../star_wars_data_helper');
 var app = new Alexa.app('starwars-wiki');
 
 app.launch(function (req, res) {
