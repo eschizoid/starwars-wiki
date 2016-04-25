@@ -14,7 +14,7 @@ app.intent('characterinfo', {
         'slots': {
             'NAME': 'CHARACTER'
         },
-        'utterances': ['{|flight|airport} {|delay|status} {|info} {|for} {-|AIRPORTCODE}']
+        'utterances': ['{|to define|define} {-|CHARACTER}']
     },
     function (req, res) {
         //get the slot
