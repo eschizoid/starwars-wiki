@@ -18,8 +18,8 @@ StarWarsDataHelper.prototype.formatCharacterInformation = function (character) {
         name: character.name,
         height: character.height,
         mass: character.mass,
-        hairColor: character.name,
-        skinColor: character.hair_color,
+        hairColor: character.hair_color,
+        skinColor: character.skin_color,
         eyeColor: character.eye_color,
         birthYear: character.birth_year,
         gender: character.gender
