@@ -1,4 +1,4 @@
-##UrbanDictionary-AWS Lambda function for Alexa
+##StarWarsWiki-AWS Lambda function for Alexa
 
 ### Setup
 To run this example skill you need to do two things. The first is to deploy the example code in lambda, and the second is to configure the Alexa skill to use Lambda.
@@ -7,7 +7,7 @@ To run this example skill you need to do two things. The first is to deploy the 
 1. Go to the AWS Console and click on the Lambda link. Note: ensure you are in us-east or you won't be able to use Alexa with Lambda.
 2. Click on the Create a Lambda Function or Get Started Now button.
 3. Skip the blueprint.
-4. Name the Lambda Function "UrbanAlexa".
+4. Name the Lambda Function "StarWarsWiki".
 5. Select the runtime as Node.js.
 6. Go to the the root directory and execute `./gradlew clean buildAlexaSkillZip`.
 7. Select Code entry type as "Upload a .ZIP file" and then upload the file `build/distribution/starwars-wiki-0.0.1.zip` to the Lambda.
