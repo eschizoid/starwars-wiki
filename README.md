@@ -21,7 +21,7 @@ To run this example skill you need to do two things. The first is to deploy the 
 
 ### Alexa Skill Setup
 1. Go to the [Alexa Console](https://developer.amazon.com/edw/home.html) and click Add a New Skill.
-2. Set "StarWarsWiki" as the skill name and "George Lucs" as the invocation name, this is what is used to activate your skill. For example you would say: "Alexa, ask George Lucas who's Luke Skywalker?"
+2. Set "StarWarsWiki" as the skill name and "George Lucas" as the invocation name, this is what is used to activate your skill. For example you would say: "Alexa, ask George Lucas who's Luke Skywalker?"
 3. Select the Lambda ARN for the skill Endpoint and paste the ARN copied from above. Click Next.
 4. Copy the custom slot types from the customSlotTypes folder. Each file in the folder represents a new custom slot type. The name of the file is the name of the custom slot type, and the values in the file are the values for the custom slot.
 5. Copy the Intent Schema from the included IntentSchema.json.
