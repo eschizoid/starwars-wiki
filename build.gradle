@@ -26,8 +26,14 @@ task buildAlexaSkillZip(type: Zip, dependsOn: npmInstall) {
     from('node_modules') {
         into '/'
     }
-    from('/') {
+    
+    from('src/main/js') {
         include "**/*.js"
         into '/'
+    }
+
+    from('src/main/resources') {
+        include "**/*.txt"
+        into '/resources'
     }
 }
