@@ -16,6 +16,8 @@ StarWarsDataHelper.prototype.requestCharacterInformation = function (name) {
 };
 
 StarWarsDataHelper.prototype.formatCharacterInformation = function (character) {
+    //TODO perhaps enrich this information using Wikipedia:
+    //TODO https://en.wikipedia.org/w/api.php?action=opensearch&search=luke%20skywalker
     return _.template('name ${name}, height ${height}, mass ${mass}, hair color ${hairColor}, skin color ${skinColor}, eye color ${eyeColor}, birthYear ${birthYear}, gender ${gender}.')({
         name: character.name,
         height: character.height,
