@@ -37,8 +37,21 @@ task buildAlexaSkillZip(type: Zip, dependsOn: npmInstall) {
         into '/'
     }
 
+    from('.') {
+        include "package.json"
+        into '/'
+    }
+
     from('src/main/resources') {
         include "**/*.txt"
         into '/resources'
     }
+}
+
+task deployAlexaSkill(dependsOn: buildAlexaSkillZip, type: Copy) {
+    def zipFile = file('build/distributions/starwars-wiki-0.0.1.zip')
+    def outputDir = file("${alexa_home}/starwars-wiki")
+
+    from zipTree(zipFile)
+    into outputDir
 }
