@@ -1,0 +1,9 @@
+{
+  "persons": {
+    "luke skywalker": 1,
+    "c3po": 2,
+    "r2d2": 3,
+    "darth vader": 4,
+    "leia organa": 5
+  }
+}

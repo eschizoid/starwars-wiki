@@ -1,13 +1,15 @@
 'use strict';
 var _ = require('lodash');
+var nconf = require('nconf');
 var swapi = require('swapi-node');
 
 function StarWarsDataHelper() {
+    nconf.file({file: 'config.json'});
 }
 
 StarWarsDataHelper.prototype.requestCharacterInformation = function (name) {
-    //TODO transform name into id
-    return swapi.getPerson(1).then(function (result) {
+    var personId = nconf.get(name.toLowerCase());
+    return swapi.getPerson(personId).then(function (result) {
         console.log(result);
         return response.body;
     });
