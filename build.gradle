@@ -24,7 +24,7 @@ repositories {
 
 task buildAlexaSkillZip(type: Zip, dependsOn: npmInstall) {
     from('node_modules') {
-        into '/'
+        into '/node_modules'
     }
 
     from('src/main/js') {
