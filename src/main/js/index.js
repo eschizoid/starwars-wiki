@@ -6,7 +6,7 @@ var StarWarsDataHelper = require('./star_wars_data_helper');
 var app = new Alexa.app('starwars-wiki');
 
 app.launch(function (req, res) {
-    var prompt = 'For Star Wars Character information, tell me name.';
+    var prompt = 'For Star Wars character information, tell me a name.';
     res.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
 
@@ -19,7 +19,7 @@ app.intent('characterinfo', {
     function (req, res) {
         //get the slot
         var name = req.slot('NAME');
-        var reprompt = 'Tell me a star wars character name to get their information.';
+        var reprompt = 'Tell me a Star Wars character name to get their information.';
         if (_.isEmpty(name)) {
             var prompt = 'I didn\'t hear a star wars character name. Tell me a star wars character name.';
             res.say(prompt).reprompt(reprompt).shouldEndSession(false);
