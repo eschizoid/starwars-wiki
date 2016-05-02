@@ -12,13 +12,13 @@ app.launch(function (req, res) {
 
 app.intent('characterinfo', {
         'slots': {
-            'NAME': 'CHARACTER'
+            'Name': 'CHARACTER'
         },
-        'utterances': ['{|to define|define} {CHARACTER}']
+        'utterances': ['{|to define|define} {Name}']
     },
     function (req, res) {
         //get the slot
-        var name = req.slot('NAME');
+        var name = req.slot('Name');
         var reprompt = 'Tell me a Star Wars character name to get their information.';
         if (_.isEmpty(name)) {
             var prompt = 'I didn\'t hear a star wars character name. Tell me a star wars character name.';
@@ -27,7 +27,6 @@ app.intent('characterinfo', {
         } else {
             var starWarsHelper = new StarWarsDataHelper();
             starWarsHelper.requestCharacterInformation(name).then(function (character) {
-                console.log(name);
                 res.say(starWarsHelper.formatCharacterInformation(character)).send();
             }).catch(function (err) {
                 console.log(err.statusCode);
